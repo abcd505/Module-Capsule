@@ -23,7 +23,7 @@ jobs:
           distribution: temurin
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4.4.2
+        uses: gradle/actions/setup-gradle@v4.4.1
         with:
           gradle-version: '8.8'
 
@@ -56,7 +56,7 @@ jobs:
           retention-days: 90
 
       - name: Upload JARs to GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v2.3.2
         with:
           files: build/libs/*.jar
           tag_name: ${{ github.event.release.tag_name }}
